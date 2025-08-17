@@ -1,7 +1,7 @@
 <?php
 
 // connect to the database
-include("./connection.php");
+include("../connection.php");
 
 // get the values that the user sent 
 $full_name = $_POST["full_name"];
@@ -33,5 +33,5 @@ $stmt->execute([
     $phone
 ]);
 
-// return a success message in JSON
+// return a success message 
 echo json_encode(["message" => "User registered successfully"]);

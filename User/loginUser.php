@@ -1,7 +1,7 @@
 <?php
 
 // connect to the database
-include("./connection.php");
+include("../connection.php");
 
 // get the email and password that the user sent 
 $email = $_POST["email"];

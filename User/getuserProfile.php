@@ -1,7 +1,7 @@
 <?php
 
 // connect to the database
-include("./connection.php");
+include("../connection.php");
 
 // get the user id that tells us which profile belongs to the user
 $user_id = $_GET["user_id"];
