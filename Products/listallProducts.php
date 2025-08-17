@@ -4,7 +4,7 @@
 include("../connection.php");
 
 // write the SQL select query to get all products
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM products where is_active=1";
 
 $stmt = $pdo->prepare($sql);
 
