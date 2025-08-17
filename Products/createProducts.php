@@ -10,6 +10,7 @@ $stock_qty = $_POST['stock_qty'];
 $category_id = $_POST['category_id'];
 $user_id = $_POST['user_id'];
 
+
 // write the SQL query to check if the user is an admin
 $sql = "SELECT is_admin FROM users WHERE id = ?";
 $stmt = $pdo->prepare($sql);
