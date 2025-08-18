@@ -12,7 +12,7 @@ $sql = "SELECT
           c.name AS category_name,
           c.description AS category_description
         FROM products p
-        LEFT JOIN categories c ON c.id = p.category_id
+        JOIN categories c ON c.id = p.category_id
         WHERE p.id = ?";
 
 $stmt = $pdo->prepare($sql);

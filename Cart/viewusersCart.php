@@ -35,7 +35,7 @@ $sql = "SELECT
             cat.description AS category_description
         FROM carts c
         JOIN products p        ON p.id = c.product_id
-        LEFT JOIN categories cat ON cat.id = p.category_id
+        JOIN categories cat ON cat.id = p.category_id
         WHERE c.user_id = ? AND p.is_active = 1";
 
 $stmt = $pdo->prepare($sql);
