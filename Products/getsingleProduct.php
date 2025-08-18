@@ -6,8 +6,14 @@ include("../connection.php");
 // get the product id from the URL
 $product_id = $_GET["product_id"];
 
-// write the SQL select query to find a product by id
-$sql = "SELECT * FROM products WHERE id = ?";
+// write the SQL to get the product and its category info
+$sql = "SELECT
+          p.id, p.name, p.description, p.price, p.stock_qty, p.category_id,
+          c.name AS category_name,
+          c.description AS category_description
+        FROM products p
+        LEFT JOIN categories c ON c.id = p.category_id
+        WHERE p.id = ?";
 
 $stmt = $pdo->prepare($sql);
 
